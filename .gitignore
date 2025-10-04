@@ -1,0 +1,41 @@
+# Archivos y carpetas de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de VS Code
+.vscode/
+*.code-workspace
+
+# Archivos temporales y de sistema
+*.log
+*.tmp
+*.swp
+
+# Archivos de dependencias (si usas npm/yarn)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Archivos de compilación (si usas herramientas como Sass, TypeScript, etc.)
+dist/
+build/
+
+# Archivos de imágenes subidas temporalmente
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+
+# Archivos de configuración personal
+.env
+.env.local
+.env.*.local
+
+# Archivos de respaldo
+*~
+*.bak
+
+# Otros archivos generados automáticamente
+coverage/
+*.idx
