@@ -1,0 +1,39 @@
+:root {
+    /* Colors */
+    --bg: #0D1B2A;
+    --surface: #1B263B;
+    --fg: #E0E1DD;
+    --muted: #778DA9;
+    --border: #415A77;
+    --accent: #778DA9;
+    --accent-on: #0D1B2A;
+
+    --accent-soft: color-mix(in oklch, var(--accent) 28%, transparent);
+    --fg-soft: color-mix(in oklch, var(--fg) 8%, transparent);
+
+    /* Typography */
+    --font-display: 'Roboto', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    --font-mono: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+
+    --fs-h1: clamp(40px, 5vw, 64px);
+    --fs-h2: clamp(28px, 3.6vw, 44px);
+    --fs-h3: 20px;
+    --fs-lead: 18px;
+    --fs-body: 16px;
+    --fs-meta: 13px;
+
+    /* Spacing */
+    --gap-xs: 8px;
+    --gap-sm: 12px;
+    --gap-md: 20px;
+    --gap-lg: 32px;
+    --gap-xl: 56px;
+    --gap-2xl: 96px;
+    --container: 1120px;
+    --gutter: 32px;
+
+    /* Borders */
+    --radius: 8px;
+    --radius-lg: 12px;
+}
