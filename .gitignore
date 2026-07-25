@@ -1,41 +1,54 @@
-# Archivos y carpetas de sistema
+# ─── Sistema operativo ─────────────────────────
 .DS_Store
 Thumbs.db
+Desktop.ini
 
-# Archivos temporales de VS Code
+# ─── Editor / IDE ──────────────────────────────
 .vscode/
+.idea/
 *.code-workspace
-
-# Archivos temporales y de sistema
-*.log
-*.tmp
 *.swp
+*.swo
+*~
+*.bak
 
-# Archivos de dependencias (si usas npm/yarn)
+# ─── Dependencias ─────────────────────────────
 node_modules/
+.pnp
+.pnp.js
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
 
-# Archivos de compilación (si usas herramientas como Sass, TypeScript, etc.)
+# ─── Compilación / Build ──────────────────────
 dist/
 build/
+out/
+prod/
 
-# Archivos de imágenes subidas temporalmente
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.svg
+# ─── Cache y logs ─────────────────────────────
+*.log
+*.tmp
+.npm/
+.eslintcache
+.stylelintcache
+.cache/
 
-# Archivos de configuración personal
+# ─── Entorno / Configuración local ────────────
 .env
 .env.local
 .env.*.local
 
-# Archivos de respaldo
-*~
-*.bak
+# ─── Python ────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
 
-# Otros archivos generados automáticamente
+# ─── Cobertura de código ──────────────────────
 coverage/
-*.idx
+.coverage
+nyc_output/
+
+# ─── IDX (Google Project IDX) ─────────────────
+.idx/
