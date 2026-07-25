@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crystal Depths · Tebaah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0D1B2A;
+      --surface: #1B263B;
+      --fg: #E0E1DD;
+      --muted: #778DA9;
+      --border: #415A77;
+      --accent: #778DA9;
+      --accent-on: #0D1B2A;
+      --accent-soft: color-mix(in oklch, var(--accent) 28%, transparent);
+      --fg-soft: color-mix(in oklch, var(--fg) 8%, transparent);
+      --font-display: 'Roboto', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+      --font-mono: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+      --fs-h1: clamp(32px, 4vw, 52px);
+      --fs-h2: clamp(24px, 3vw, 36px);
+      --fs-h3: 18px;
+      --fs-body: 16px;
+      --gap-md: 20px;
+      --gap-lg: 32px;
+      --gap-xl: 56px;
+      --container: 800px;
+      --gutter: 32px;
+      --radius: 8px;
+      --radius-lg: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      font-size: var(--fs-body);
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    p { text-wrap: pretty; }
+    h1, h2, h3, h4 { text-wrap: balance; }
+
+    .container {
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+    .stack { display: flex; flex-direction: column; }
+    .stack > * + * { margin-top: var(--gap-md); }
+
+    .back-bar {
+      padding-block: 20px;
+    }
+    .back-bar a {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .back-bar a:hover { color: var(--accent); }
+
+    .hero-project {
+      padding-block: clamp(40px, 6vw, 80px) var(--gap-xl);
+    }
+    .hero-project .project-type {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 0 0 var(--gap-md);
+    }
+    .hero-project h1 { font-family: var(--font-display); font-size: var(--fs-h1); line-height: 1.1; letter-spacing: -0.02em; margin: 0; font-weight: 600; }
+    .hero-project .lead { font-size: 18px; line-height: 1.55; color: var(--muted); margin: var(--gap-md) 0 0; max-width: 60ch; }
+
+    .detail-section {
+      padding-block: var(--gap-lg);
+    }
+    .detail-section + .detail-section { border-top: 1px solid var(--border); }
+    .detail-section h2 {
+      font-family: var(--font-display);
+      font-size: var(--fs-h2);
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin: 0 0 var(--gap-md);
+    }
+    .detail-section p { margin: 0; color: var(--fg); max-width: 68ch; }
+
+    .tag {
+      display: inline-flex; align-items: center;
+      padding: 4px 10px;
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 12px;
+    }
+
+    .pagefoot {
+      padding-block: var(--gap-xl);
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      margin-top: var(--gap-xl);
+    }
+    .pagefoot a { color: var(--muted); }
+    .pagefoot a:hover { color: var(--fg); }
+
+    @media (max-width: 640px) {
+      :root { --gutter: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-bar" data-od-id="back-bar">
+    <div class="container">
+      <a href="../portfolio.html#proyectos">&larr; Volver a proyectos</a>
+    </div>
+  </div>
+
+  <article>
+    <div class="container hero-project" data-od-id="project-hero">
+      <p class="project-type">Videojuego</p>
+      <h1>Crystal Depths</h1>
+      <p class="lead">
+        Videojuego de exploración submarina en mundo abierto donde el jugador
+        descubre ecosistemas marinos, resuelve puzzles y recolecta cristales ancestrales.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="detail-section" data-od-id="detail-problema">
+        <h2>Problema</h2>
+        <p>
+          Falta de juegos que combinen entretenimiento con divulgación científica
+          sobre oceanografía y biología marina de forma orgánica y no instructiva.
+          La mayoría de juegos educativos sacrifican diversión por información,
+          y los títulos comerciales rara vez incluyen contenido científico riguroso.
+          Crystal Depths nace para cerrar esa brecha.
+        </p>
+      </div>
+
+      <div class="detail-section" data-od-id="detail-construccion">
+        <h2>Qué se construyó</h2>
+        <p>
+          Motor de física acuática personalizado, sistema de día/noche bajo el agua,
+          flora y fauna procedural, y un sistema de progresión no lineal con 5 biomas
+          distintos. Cada bioma presenta ecosistemas únicos con comportamiento animal
+          simulado, corrientes oceánicas dinámicas y vegetación que reacciona al
+          entorno. El juego incluye un fotómodo integrado y un diario de bitácora
+          que registra descubrimientos.
+        </p>
+      </div>
+
+      <div class="detail-section" data-od-id="detail-stack">
+        <h2>Stack tecnológico</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px;">
+          <span class="tag">Unity</span>
+          <span class="tag">C#</span>
+          <span class="tag">Blender</span>
+          <span class="tag">Shader Graph</span>
+          <span class="tag">FMOD</span>
+          <span class="tag">Universal RP</span>
+          <span class="tag">Git LFS</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer class="pagefoot" data-od-id="footer">
+    <div class="container">
+      <span><a href="../portfolio.html#proyectos">&larr; Volver a proyectos</a> · &copy; Tebaah 2026</span>
+    </div>
+  </footer>
+</body>
+</html>
