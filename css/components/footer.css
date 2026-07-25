@@ -1,0 +1,16 @@
+.pagefoot {
+    padding-block: var(--gap-xl);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.pagefoot__inner {
+    flex-wrap: wrap;
+    gap: var(--gap-md);
+}
+
+.pagefoot__role {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--muted);
+}
