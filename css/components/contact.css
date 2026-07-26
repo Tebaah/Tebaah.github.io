@@ -1,3 +1,11 @@
+.contact__heading {
+    margin-bottom: var(--gap-xl);
+}
+
+.contact__form-stack {
+    gap: var(--gap-md);
+}
+
 .contact__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

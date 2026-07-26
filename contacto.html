@@ -33,7 +33,7 @@
         <section class="section page-section page-section--active" id="page-contacto">
             <div class="container">
                 <p class="text--eyebrow">CONTACTO</p>
-                <h2 style="margin-bottom: var(--gap-xl);">Trabajemos juntos</h2>
+                <h2 class="contact__heading">Trabajemos juntos</h2>
                 <div class="contact__grid">
                     <div>
                         <p class="text--lead contact__lead">
@@ -43,31 +43,38 @@
                         <div class="contact__info">
                             <p class="contact__info-item">
                                 <strong class="contact__info-label">Email</strong><br />
-                                <span class="contact__info-value">tebaah@ejemplo.com</span>
+                                <span class="contact__info-value">tebaah@tebaah.dev</span>
                             </p>
                             <p class="contact__info-item">
                                 <strong class="contact__info-label">Ubicación</strong><br />
-                                <span class="contact__info-value">España</span>
+                                <span class="contact__info-value">Santiago, Chile</span>
                             </p>
                         </div>
                     </div>
-                    <form onsubmit="event.preventDefault(); alert('Mensaje enviado (demo)');">
-                        <div class="stack" style="gap: var(--gap-md);">
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="74272666-c7ad-4ddf-a248-4aaf474b4e8c" />
+                        <input type="hidden" name="from_name" value="Formulario Web - Tebaah.dev" />
+
+                        <div class="stack contact__form-stack">
                             <div class="form__field">
                                 <label class="form__label" for="nombre">Nombre</label>
-                                <input class="form__input" id="nombre" type="text" placeholder="Tu nombre" required />
-                            </div>
-                            <div class="form__field">
-                                <label class="form__label" for="email">Email</label>
-                                <input class="form__input" id="email" type="email" placeholder="tu@email.com"
+                                <input class="form__input" id="nombre" type="text" name="name" placeholder="Tu nombre"
                                     required />
                             </div>
                             <div class="form__field">
-                                <label class="form__label" for="mensaje">Mensaje</label>
-                                <textarea class="form__textarea" id="mensaje" placeholder="¿En qué puedo ayudarte?"
-                                    required></textarea>
+                                <label class="form__label" for="email">Email</label>
+                                <input class="form__input" id="email" type="email" name="email"
+                                    placeholder="tu@email.com" required />
                             </div>
-                            <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+                            <div class="form__field">
+                                <label class="form__label" for="mensaje">Mensaje</label>
+                                <textarea class="form__textarea" id="mensaje" name="message"
+                                    placeholder="¿En qué puedo ayudarte?" required></textarea>
+                            </div>
+                            <button class="btn btn--primary" type="submit" id="form-submit-btn">
+                                Enviar mensaje
+                            </button>
+                            <div id="form-status" class="form__status" hidden></div>
                         </div>
                     </form>
                 </div>
@@ -82,6 +89,47 @@
             <span class="pagefoot__role">Desarrollador web y videojuegos</span>
         </div>
     </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+        const submitBtn = document.getElementById('form-submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+            status.hidden = true;
+
+            try {
+                const data = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    status.className = 'form__status form__status--success';
+                    status.textContent = 'Mensaje enviado correctamente. Gracias por contactarme.';
+                    status.hidden = false;
+                    form.reset();
+                } else {
+                    throw new Error(result.message || 'Error al enviar el mensaje.');
+                }
+            } catch (error) {
+                status.className = 'form__status form__status--error';
+                status.textContent = error.message + ' Intenta de nuevo o escríbeme directamente a tebaah@tebaah.dev.';
+                status.hidden = false;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Enviar mensaje';
+            }
+        });
+    </script>
 
 </body>
 
