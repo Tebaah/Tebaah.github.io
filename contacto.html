@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto · Tebaah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+        <div class="container nav-wrapper__inner">
+            <nav>
+                <ul class="nav-wrapper__list">
+                    <li><a href="index.html" class="nav-wrapper__link">Inicio</a></li>
+                    <li><a href="proyectos/index.html" class="nav-wrapper__link">Proyectos</a></li>
+                    <li><a href="sobre-mi.html" class="nav-wrapper__link">Sobre mí</a></li>
+                    <li><a href="blog.html" class="nav-wrapper__link">Blog</a></li>
+                    <li><a href="contacto.html" class="nav-wrapper__link nav-wrapper__link--active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section class="section page-section page-section--active" id="page-contacto">
+            <div class="container">
+                <p class="text--eyebrow">CONTACTO</p>
+                <h2 style="margin-bottom: var(--gap-xl);">Trabajemos juntos</h2>
+                <div class="contact__grid">
+                    <div>
+                        <p class="text--lead contact__lead">
+                            Si tienes un proyecto en mente, una idea que quieras explorar o simplemente
+                            quieres saludar — estaré encantado de escucharte.
+                        </p>
+                        <div class="contact__info">
+                            <p class="contact__info-item">
+                                <strong class="contact__info-label">Email</strong><br />
+                                <span class="contact__info-value">tebaah@ejemplo.com</span>
+                            </p>
+                            <p class="contact__info-item">
+                                <strong class="contact__info-label">Ubicación</strong><br />
+                                <span class="contact__info-value">España</span>
+                            </p>
+                        </div>
+                    </div>
+                    <form onsubmit="event.preventDefault(); alert('Mensaje enviado (demo)');">
+                        <div class="stack" style="gap: var(--gap-md);">
+                            <div class="form__field">
+                                <label class="form__label" for="nombre">Nombre</label>
+                                <input class="form__input" id="nombre" type="text" placeholder="Tu nombre" required />
+                            </div>
+                            <div class="form__field">
+                                <label class="form__label" for="email">Email</label>
+                                <input class="form__input" id="email" type="email" placeholder="tu@email.com"
+                                    required />
+                            </div>
+                            <div class="form__field">
+                                <label class="form__label" for="mensaje">Mensaje</label>
+                                <textarea class="form__textarea" id="mensaje" placeholder="¿En qué puedo ayudarte?"
+                                    required></textarea>
+                            </div>
+                            <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pagefoot">
+        <div class="container row--between pagefoot__inner">
+            <span>&copy; Tebaah · 2026</span>
+            <span class="pagefoot__role">Desarrollador web y videojuegos</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

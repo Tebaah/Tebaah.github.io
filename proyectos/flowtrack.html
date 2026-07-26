@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FlowTrack · Tebaah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+  <div class="back-bar">
+    <div class="container">
+      <a href="index.html">&larr; Volver a proyectos</a>
+    </div>
+  </div>
+
+  <article>
+    <div class="container hero-project">
+      <p class="project-type">Web</p>
+      <h1>FlowTrack</h1>
+      <p class="lead">
+        Plataforma colaborativa de gestión de proyectos con tableros kanban,
+        seguimiento de tiempo y reportes en tiempo real para equipos distribuidos.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="detail-section">
+        <h2>Problema</h2>
+        <p>
+          Los equipos remotos carecían de visibilidad sobre el progreso diario.
+          Las herramientas existentes eran lentas o demasiado complejas para equipos pequeños,
+          lo que obligaba a combinar varias aplicaciones inconexas (un chat, un gestor de tareas,
+          una hoja de cálculo) generando fricción y pérdida de contexto.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h2>Qué se construyó</h2>
+        <p>
+          Dashboard en tiempo real con drag & drop, notificaciones push, integración
+          con GitHub y generación automática de sprints basada en carga de trabajo.
+          Se diseñó una API REST con WebSockets para sincronización instantánea entre
+          miembros del equipo, un sistema de roles con permisos granular, y un motor
+          de reportes que exporta métricas de productividad en PDF y CSV.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h2>Stack tecnológico</h2>
+        <div class="tag__list">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">WebSocket</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Redis</span>
+          <span class="tag">Tailwind CSS</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer class="pagefoot">
+    <div class="container">
+      <span><a href="index.html">&larr; Volver a proyectos</a> · &copy; Tebaah 2026</span>
+    </div>
+  </footer>
+</body>
+
+</html>

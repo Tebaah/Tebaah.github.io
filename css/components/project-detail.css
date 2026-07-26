@@ -1,0 +1,71 @@
+/* ════════════════════════════════════════════
+   Project Detail — Páginas individuales de proyecto
+   ════════════════════════════════════════════ */
+
+.back-bar {
+    padding-block: 20px;
+}
+
+.back-bar a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.back-bar a:hover {
+    color: var(--accent);
+}
+
+.hero-project {
+    padding-block: clamp(40px, 6vw, 80px) var(--gap-xl);
+}
+
+.hero-project .project-type {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin: 0 0 var(--gap-md);
+}
+
+.hero-project h1 {
+    font-family: var(--font-display);
+    font-size: var(--fs-h1);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0;
+    font-weight: 600;
+}
+
+.hero-project .lead {
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin: var(--gap-md) 0 0;
+    max-width: 60ch;
+}
+
+.detail-section {
+    padding-block: var(--gap-lg);
+}
+
+.detail-section+.detail-section {
+    border-top: 1px solid var(--border);
+}
+
+.detail-section h2 {
+    font-family: var(--font-display);
+    font-size: var(--fs-h2);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 0 0 var(--gap-md);
+}
+
+.detail-section p {
+    margin: 0;
+    color: var(--fg);
+    max-width: 68ch;
+}
