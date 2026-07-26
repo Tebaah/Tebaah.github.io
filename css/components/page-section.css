@@ -5,10 +5,6 @@
 }
 
 .page-section {
-    display: none;
-}
-
-.page-section--active {
     display: flex;
     flex-direction: column;
     justify-content: center;

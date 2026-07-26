@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog · Tebaah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+        <div class="container nav-wrapper__inner">
+            <nav>
+                <ul class="nav-wrapper__list">
+                    <li><a href="index.html" class="nav-wrapper__link">Inicio</a></li>
+                    <li><a href="proyectos/index.html" class="nav-wrapper__link">Proyectos</a></li>
+                    <li><a href="sobre-mi.html" class="nav-wrapper__link">Sobre mí</a></li>
+                    <li><a href="blog.html" class="nav-wrapper__link nav-wrapper__link--active">Blog</a></li>
+                    <li><a href="contacto.html" class="nav-wrapper__link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section class="section page-section page-section--active" id="page-blog">
+            <div class="container">
+                <p class="text--eyebrow">BLOG</p>
+                <h2 style="margin-bottom: var(--gap-sm);">Bitácora de desarrollo</h2>
+                <p class="text--lead blog__lead">
+                    Notas, aprendizajes y actualizaciones sobre el proyecto en curso.
+                </p>
+                <div>
+                    <article class="blog__entry">
+                        <span class="text--meta blog__entry-date">Jul 20, 2026</span>
+                        <div>
+                            <h3 class="blog__entry-title">Optimizando el pipeline de assets para Crystal Depths</h3>
+                            <p class="blog__entry-desc">Implementé un sistema de compresión de texturas que reduce el
+                                tiempo de carga
+                                en un 40% sin pérdida visible de calidad.</p>
+                        </div>
+                    </article>
+                    <article class="blog__entry">
+                        <span class="text--meta blog__entry-date">Jul 12, 2026</span>
+                        <div>
+                            <h3 class="blog__entry-title">Migrando FlowTrack a arquitectura modular</h3>
+                            <p class="blog__entry-desc">Refactoricé el backend de Express a una arquitectura de
+                                microservicios con
+                                colas de mensajes para mejorar la escalabilidad.</p>
+                        </div>
+                    </article>
+                    <article class="blog__entry">
+                        <span class="text--meta blog__entry-date">Jul 03, 2026</span>
+                        <div>
+                            <h3 class="blog__entry-title">Shader Graph: creando agua stylized en tiempo real</h3>
+                            <p class="blog__entry-desc">Exploración de técnicas de vertex displacement y fresnel para el
+                                océano
+                                stylized del nuevo bioma tropical.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pagefoot">
+        <div class="container row--between pagefoot__inner">
+            <span>&copy; Tebaah · 2026</span>
+            <span class="pagefoot__role">Desarrollador web y videojuegos</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
