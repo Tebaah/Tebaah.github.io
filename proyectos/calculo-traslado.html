@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cálculo Traslado · Tebaah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+    <div class="back-bar">
+        <div class="container">
+            <a href="index.html">&larr; Volver a proyectos</a>
+        </div>
+    </div>
+
+    <article>
+        <div class="container hero-project">
+            <p class="project-type">Web</p>
+            <h1>Cálculo Traslado</h1>
+            <p class="lead">
+                Sistema web para calcular costos estimados de transporte de carga en camión
+                con ruta en mapa interactivo.
+            </p>
+            <a href="https://github.com/Tebaah/CalculoTraslado" class="project__repo" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="project__repo-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                </svg>
+                Ver código en GitHub
+            </a>
+        </div>
+
+        <div class="container">
+            <div class="detail-section">
+                <h2>Problema</h2>
+                <p>
+                    Calcular costos de transporte de carga en camión entre localidades es un proceso
+                    manual propenso a errores: depende de distancias variables, tarifas por kilómetro,
+                    horas de viaje y costo de grúa. No existe una herramienta simple que integre
+                    mapas interactivos con una fórmula de costos clara y parámetros configurables
+                    como valor hora grúa y cantidad de camiones.
+                </p>
+            </div>
+
+            <div class="detail-section">
+                <h2>Qué se construyó</h2>
+                <p>
+                    Aplicación web que integra Google Maps JavaScript API con Directions API para
+                    seleccionar origen y destino, trazar la ruta y calcular la distancia total.
+                    Aplica la fórmula: distancia redonda × 2, horas de viaje (distancia / 40 km/h),
+                    costo grúa (horas × valor hora), costo camiones (distancia total × $3.000 ×
+                    cantidad de camiones), y costo total. Los parámetros de valor hora grúa y
+                    cantidad de camiones son configurables desde la interfaz. La API key se protege
+                    mediante función serverless en Vercel.
+                </p>
+
+                <div class="carousel" data-carousel>
+                    <div class="carousel__track" data-carousel-track>
+                        <figure class="carousel__slide">
+                            <img src="assets/calculo-traslado/traslado-home.png"
+                                alt="Pantalla principal de la aplicación" />
+                            <figcaption>Pantalla principal con mapa interactivo y formulario de cálculo.</figcaption>
+                        </figure>
+
+                        <figure class="carousel__slide">
+                            <img src="assets/calculo-traslado/traslado-calculado.png"
+                                alt="Pantalla con resultado del cálculo" />
+                            <figcaption>Resultado del costo total con ruta trazada en el mapa.
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <button class="carousel__btn carousel__btn--prev" data-carousel-prev aria-label="Anterior">
+                        &#8249;
+                    </button>
+                    <button class="carousel__btn carousel__btn--next" data-carousel-next aria-label="Siguiente">
+                        &#8250;
+                    </button>
+
+                    <div class="carousel__dots" data-carousel-dots></div>
+                </div>
+            </div>
+
+            <div class="detail-section">
+                <h2>Stack tecnológico</h2>
+                <div class="tag__list">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Google Maps API</span>
+                    <span class="tag">Vercel</span>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="pagefoot">
+        <div class="container">
+            <span><a href="index.html">&larr; Volver a proyectos</a> · &copy; Tebaah 2026</span>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('[data-carousel]');
+            if (!carousel) return;
+
+            const track = carousel.querySelector('[data-carousel-track]');
+            const slides = track.querySelectorAll('.carousel__slide');
+            const prevBtn = carousel.querySelector('[data-carousel-prev]');
+            const nextBtn = carousel.querySelector('[data-carousel-next]');
+            const dotsContainer = carousel.querySelector('[data-carousel-dots]');
+
+            let currentIndex = 0;
+
+            function goTo(index) {
+                slides.forEach(function (slide, i) {
+                    slide.classList.toggle('carousel__slide--active', i === index);
+                });
+                dotsContainer.querySelectorAll('.carousel__dot').forEach(function (dot, i) {
+                    dot.classList.toggle('carousel__dot--active', i === index);
+                });
+                currentIndex = index;
+            }
+
+            function next() {
+                goTo((currentIndex + 1) % slides.length);
+            }
+
+            function prev() {
+                goTo((currentIndex - 1 + slides.length) % slides.length);
+            }
+
+            slides.forEach(function (_, i) {
+                var dot = document.createElement('button');
+                dot.className = 'carousel__dot' + (i === 0 ? ' carousel__dot--active' : '');
+                dot.setAttribute('aria-label', 'Ir a slide ' + (i + 1));
+                dot.addEventListener('click', function () { goTo(i); });
+                dotsContainer.appendChild(dot);
+            });
+
+            prevBtn.addEventListener('click', prev);
+            nextBtn.addEventListener('click', next);
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowLeft') prev();
+                if (e.key === 'ArrowRight') next();
+            });
+
+            goTo(0);
+        });
+    </script>
+</body>
+
+</html>
