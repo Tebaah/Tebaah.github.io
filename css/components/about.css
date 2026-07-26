@@ -1,3 +1,7 @@
+.about__heading {
+    margin-bottom: var(--gap-lg);
+}
+
 .about__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -18,6 +22,18 @@
 }
 
 .about__lead {
+    margin-bottom: var(--gap-md);
+}
+
+.about__section {
+    margin-bottom: var(--gap-xl);
+}
+
+.about__section:last-child {
+    margin-bottom: 0;
+}
+
+.about__section-title {
     margin-bottom: var(--gap-md);
 }
 
@@ -46,5 +62,11 @@
 .exp__place {
     color: var(--muted);
     font-size: 14px;
+    margin: 0;
+}
+
+.exp__desc {
+    font-size: 0.9rem;
+    color: var(--muted);
     margin: 0;
 }
