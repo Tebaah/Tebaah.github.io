@@ -52,3 +52,6 @@ nyc_output/
 
 # ─── IDX (Google Project IDX) ─────────────────
 .idx/
+
+# ─── Cline / AI ────────────────────────────────
+.clinerules/
