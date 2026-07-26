@@ -1,0 +1,12 @@
+.ph-img {
+    background: linear-gradient(135deg, var(--accent-soft), var(--fg-soft)), var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    aspect-ratio: 16 / 10;
+    display: grid;
+    place-items: center;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+}

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cálculo de Horas · Tebaah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+    <div class="back-bar">
+        <div class="container">
+            <a href="index.html">&larr; Volver a proyectos</a>
+        </div>
+    </div>
+
+    <article>
+        <div class="container hero-project">
+            <p class="project-type">Web</p>
+            <h1>Cálculo de Horas</h1>
+            <p class="lead">
+                Herramienta web para calcular los costos del servicio de una organización,
+                basada en las horas trabajadas por el personal, considerando distintos
+                tipos de jornada y reglas de recargo.
+            </p>
+            <a href="https://github.com/Tebaah/CalculoHoras" class="project__repo" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="project__repo-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                </svg>
+                Ver código en GitHub
+            </a>
+        </div>
+
+        <div class="container">
+            <div class="detail-section">
+                <h2>Problema</h2>
+                <p>
+                    En muchas organizaciones, el cálculo de costos de servicios requiere considerar
+                    múltiples reglas: días normales, sábados, domingos y festivos con distintos recargos;
+                    horas sin recargo y con recargo con porcentajes configurables; horas dobles del operador
+                    en horarios específicos; descuentos por colación; jornadas que cruzan la medianoche;
+                    mínimos de horas garantizados; y reportes semanales consolidados. Hacer todo esto
+                    manualmente genera errores y pérdidas de tiempo.
+                </p>
+            </div>
+
+            <div class="detail-section">
+                <h2>Qué se construyó</h2>
+                <p>
+                    Calculadora individual con selección de tipo de día, ingreso de hora de inicio y término
+                    (con soporte para jornadas que cruzan medianoche), valor hora configurable, porcentaje
+                    de recargo ajustable, mínimo de horas garantizado y descuento opcional de colación.
+                    Reporte semanal que consolida los 7 días con totales generales. Estados de pago que
+                    agregan registros existentes y costos adicionales con generación de liquidación
+                    imprimible con logo de empresa e IVA. Historial completo con búsqueda, filtros,
+                    modificaciones y exportación/importación JSON. Todo persistido en localStorage.
+                </p>
+
+                <div class="carousel" data-carousel>
+                    <div class="carousel__track" data-carousel-track>
+                        <figure class="carousel__slide">
+                            <img src="assets/calculo-horas/calculo-home.png"
+                                alt="Pantalla de inicio de la aplicación" />
+                            <figcaption>Pantalla de inicio con descripción general de la herramienta.</figcaption>
+                        </figure>
+
+                        <figure class="carousel__slide">
+                            <img src="assets/calculo-horas/calculo-ordenes.png"
+                                alt="Pantalla de la calculadora individual de órdenes" />
+                            <figcaption>Calculadora individual con selección de tipo de día y resultados detallados.
+                            </figcaption>
+                        </figure>
+
+                        <figure class="carousel__slide">
+                            <img src="assets/calculo-horas/calculo-reportes.png"
+                                alt="Pantalla del reporte semanal consolidado" />
+                            <figcaption>Reporte semanal con totales consolidados por día.</figcaption>
+                        </figure>
+
+                        <figure class="carousel__slide">
+                            <img src="assets/calculo-horas/calculo-estados.png"
+                                alt="Pantalla del estado de pago con liquidación" />
+                            <figcaption>Estado de pago con costos adicionales y liquidación imprimible.</figcaption>
+                        </figure>
+
+                        <figure class="carousel__slide">
+                            <img src="assets/calculo-horas/calculo-historial.png"
+                                alt="Pantalla del historial de registros" />
+                            <figcaption>Historial con búsqueda, filtros y exportación/importación JSON.</figcaption>
+                        </figure>
+                    </div>
+
+                    <button class="carousel__btn carousel__btn--prev" data-carousel-prev aria-label="Anterior">
+                        &#8249;
+                    </button>
+                    <button class="carousel__btn carousel__btn--next" data-carousel-next aria-label="Siguiente">
+                        &#8250;
+                    </button>
+
+                    <div class="carousel__dots" data-carousel-dots></div>
+                </div>
+            </div>
+
+            <div class="detail-section">
+                <h2>Stack tecnológico</h2>
+                <div class="tag__list">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript (ES Modules)</span>
+                    <span class="tag">Vite</span>
+                    <span class="tag">localStorage</span>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="pagefoot">
+        <div class="container">
+            <span><a href="index.html">&larr; Volver a proyectos</a> · &copy; Tebaah 2026</span>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('[data-carousel]');
+            if (!carousel) return;
+
+            const track = carousel.querySelector('[data-carousel-track]');
+            const slides = track.querySelectorAll('.carousel__slide');
+            const prevBtn = carousel.querySelector('[data-carousel-prev]');
+            const nextBtn = carousel.querySelector('[data-carousel-next]');
+            const dotsContainer = carousel.querySelector('[data-carousel-dots]');
+
+            let currentIndex = 0;
+
+            function goTo(index) {
+                slides.forEach(function (slide, i) {
+                    slide.classList.toggle('carousel__slide--active', i === index);
+                });
+                dotsContainer.querySelectorAll('.carousel__dot').forEach(function (dot, i) {
+                    dot.classList.toggle('carousel__dot--active', i === index);
+                });
+                currentIndex = index;
+            }
+
+            function next() {
+                goTo((currentIndex + 1) % slides.length);
+            }
+
+            function prev() {
+                goTo((currentIndex - 1 + slides.length) % slides.length);
+            }
+
+            // Crear dots
+            slides.forEach(function (_, i) {
+                var dot = document.createElement('button');
+                dot.className = 'carousel__dot' + (i === 0 ? ' carousel__dot--active' : '');
+                dot.setAttribute('aria-label', 'Ir a slide ' + (i + 1));
+                dot.addEventListener('click', function () { goTo(i); });
+                dotsContainer.appendChild(dot);
+            });
+
+            // Eventos botones
+            prevBtn.addEventListener('click', prev);
+            nextBtn.addEventListener('click', next);
+
+            // Teclado
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowLeft') prev();
+                if (e.key === 'ArrowRight') next();
+            });
+
+            // Mostrar primer slide
+            goTo(0);
+        });
+    </script>
+</body>
+
+</html>

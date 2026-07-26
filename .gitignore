@@ -1,0 +1,57 @@
+# ─── Sistema operativo ─────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ─── Editor / IDE ──────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+*.bak
+
+# ─── Dependencias ─────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ─── Compilación / Build ──────────────────────
+dist/
+build/
+out/
+prod/
+
+# ─── Cache y logs ─────────────────────────────
+*.log
+*.tmp
+.npm/
+.eslintcache
+.stylelintcache
+.cache/
+
+# ─── Entorno / Configuración local ────────────
+.env
+.env.local
+.env.*.local
+
+# ─── Python ────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# ─── Cobertura de código ──────────────────────
+coverage/
+.coverage
+nyc_output/
+
+# ─── IDX (Google Project IDX) ─────────────────
+.idx/
+
+# ─── Cline / AI ────────────────────────────────
+.clinerules/

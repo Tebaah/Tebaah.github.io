@@ -1,0 +1,196 @@
+/* ════════════════════════════════════════════
+   Project Detail — Páginas individuales de proyecto
+   ════════════════════════════════════════════ */
+
+.back-bar {
+    padding-block: 20px;
+}
+
+.back-bar a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.back-bar a:hover {
+    color: var(--accent);
+}
+
+.hero-project {
+    padding-block: clamp(40px, 6vw, 80px) var(--gap-xl);
+}
+
+.hero-project .project-type {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin: 0 0 var(--gap-md);
+}
+
+.hero-project h1 {
+    font-family: var(--font-display);
+    font-size: var(--fs-h1);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0;
+    font-weight: 600;
+}
+
+.hero-project .lead {
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin: var(--gap-md) 0 0;
+}
+
+.project__repo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: var(--gap-lg);
+    font-size: 14px;
+    color: var(--fg);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 16px;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.project__repo:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.project__repo-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.detail-section {
+    padding-block: var(--gap-lg);
+}
+
+.detail-section+.detail-section {
+    border-top: 1px solid var(--border);
+}
+
+.detail-section h2 {
+    font-family: var(--font-display);
+    font-size: var(--fs-h2);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 0 0 var(--gap-md);
+}
+
+.detail-section p {
+    margin: 0;
+    color: var(--fg);
+}
+
+/* ─── Carrusel ────────────────────────────── */
+
+.carousel {
+    position: relative;
+    margin-top: var(--gap-lg);
+    max-width: 800px;
+}
+
+.carousel__track {
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    position: relative;
+}
+
+.carousel__slide {
+    display: none;
+    margin: 0;
+}
+
+.carousel__slide--active {
+    display: block;
+}
+
+.carousel__slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel__slide figcaption {
+    padding: var(--gap-sm) var(--gap-md);
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.4;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+}
+
+/* ─── Botones ─────────────────────────────── */
+
+.carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--fg);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+    transition: opacity 0.2s, background 0.2s;
+}
+
+.carousel__btn:hover {
+    opacity: 1;
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+.carousel__btn--prev {
+    left: -20px;
+}
+
+.carousel__btn--next {
+    right: -20px;
+}
+
+/* ─── Dots ────────────────────────────────── */
+
+.carousel__dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: var(--gap-sm);
+}
+
+.carousel__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+}
+
+.carousel__dot--active {
+    background: var(--accent);
+    border-color: var(--accent);
+}
